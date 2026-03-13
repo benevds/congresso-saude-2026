@@ -1,0 +1,43 @@
+/* --- ESTILOS PARA PÁGINAS INTERNAS (Ex: Apresentação) --- */
+
+.page-container {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.page-title {
+    text-align: center;
+    color: #00796b; /* Cor parecida com a do CBTOX */
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+}
+
+.page-content p {
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+.page-content strong {
+    color: var(--text-color);
+}
+
+.signature {
+    margin-top: 50px;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Destacar o link ativo no menu */
+.nav-links a.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+}
