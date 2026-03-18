@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>I Congresso em Ciências da Saúde na Amazônia</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <header>
         <div class="nav-container">
             <a href="index.html"><img src="img/logo.jpeg" alt="Logo ICSA 2026" class="logo-img"></a>
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
             <nav class="nav-links">
                 <a href="index.html" class="active">Home</a>
                 <a href="apresentacao.html">Apresentação</a>
@@ -28,6 +35,9 @@
         
         <img src="img/logo-completo.jpeg" alt="Banner ICSA" style="width: 100%; height: auto; display: block; object-fit: cover; max-height: 90vh;">
 
+        <div class="btn-hero-mobile-container">
+            <a href="#datas" class="btn-hero-mobile">INSCREVA-SE / SUBMISSÕES</a>
+        </div>
     </section>
 
     <section id="datas" class="section-container" style="background-color: var(--white);">
@@ -110,5 +120,6 @@
     </footer>
 
     <script src="js/script.js"></script>
+    
 </body>
 </html>
