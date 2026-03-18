@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação - ICSA 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html"><img src="img/logo.jpeg" alt="Logo ICSA 2026" class="logo-img"></a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="apresentacao.html">Apresentação</a>
+                <a href="programacao.html" class="active">Programação</a>
+                <a href="index.html#datas">Datas Importantes</a>
+                <a href="index.html#palestrantes">Palestrantes</a>
+                <a href="index.html#local">Local do Evento</a>
+                <a href="index.html#submissao" class="btn-subscribe">Inscreva-se</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="section-container">
+        <h1 class="section-title">Programação Detalhada</h1>
+        
+        <div class="tabs-container">
+            <button class="tab-btn active" onclick="openTab(event, 'dia1')">Dia 01 (26/08)</button>
+            <button class="tab-btn" onclick="openTab(event, 'dia2')">Dia 02 (27/08)</button>
+            <button class="tab-btn" onclick="openTab(event, 'dia3')">Dia 03 (28/08)</button>
+        </div>
+
+        <div id="dia1" class="tab-content active">
+            <div class="schedule-wrapper">
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th class="time-col">Dia 1<br>26/08</th>
+                            <th colspan="6">Credenciamento (17:00 - 20:00) | Auditório Tapajós</th>
+                        </tr>
+                        <tr>
+                            <th>Horário</th>
+                            <th>Núcleo Tecnológico</th>
+                            <th>Farmácia Universitária</th>
+                            <th>Lab. Informática</th>
+                            <th>Lab. Farmacotécnica</th>
+                            <th>Miniauditório</th>
+                            <th>Sala de Aula</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time-col">08:00 - 12:00</td>
+                            <td>
+                                <div class="event-type">Minicurso</div>
+                                <div class="event-title">Auriculoterapia</div>
+                                <div class="event-speaker">Prof. Dr. Madson Gomes</div>
+                            </td>
+                            <td>
+                                <div class="event-type">Minicurso</div>
+                                <div class="event-title">Perfumaria com essências</div>
+                                <div class="event-speaker">Dra. Adriele Miranda</div>
+                            </td>
+                            <td>
+                                <div class="event-type">Minicurso</div>
+                                <div class="event-title">Uso de bases de dados</div>
+                                <div class="event-speaker">Prof. Dr. Hernane Guimarães</div>
+                            </td>
+                            <td>
+                                <div class="event-type">Minicurso</div>
+                                <div class="event-title">Loções com manteigas</div>
+                                <div class="event-speaker">Profª. Dra. Kariane Nunes</div>
+                            </td>
+                            <td>
+                                <div class="event-type">Minicurso</div>
+                                <div class="event-title">Noções de Primeiros Socorros</div>
+                                <div class="event-speaker">Enfermeiro Antenor Matos</div>
+                            </td>
+                            <td>
+                                <div class="event-type">Minicurso</div>
+                                <div class="event-title">Reflexologia Podal</div>
+                                <div class="event-speaker">SMS Santarém</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">14:00 - 18:00</td>
+                            <td>
+                                <div class="event-type">Perícias Criminais</div>
+                                <div class="event-title">Áreas de atuação na Amazônia</div>
+                                <div class="event-speaker">Me. Douglas Avelar</div>
+                            </td>
+                            <td>
+                                <div class="event-type">Minicurso</div>
+                                <div class="event-title">Biossegurança laboratorial</div>
+                                <div class="event-speaker">Me. Adenilson Barroso</div>
+                            </td>
+                            <td>
+                                <div class="event-type">Minicurso</div>
+                                <div class="event-title">Estatística com Graph Prism</div>
+                                <div class="event-speaker">Msc. Amanda Esquerdo</div>
+                            </td>
+                            <td></td>
+                            <td colspan="2">
+                                <div style="display:flex; gap: 20px;">
+                                    <div style="flex:1;">
+                                        <div class="event-type">Minicurso</div>
+                                        <div class="event-title">Avaliação clínica de lesões</div>
+                                        <div class="event-speaker">Perito Alexandre Azevedo</div>
+                                    </div>
+                                    <div style="flex:1;">
+                                        <div class="event-type">Minicurso</div>
+                                        <div class="event-title">Redação científica</div>
+                                        <div class="event-speaker">Prof. Dr. Lincoln Correa</div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">19:00 - 21:30</td>
+                            <td colspan="6" class="full-width-event">
+                                Apresentação Cultural - Grupo de Carimbó Raízes Amazônicas (19:00 - 19:30)<br><br>
+                                Cerimônia de Abertura (19:30 - 20:30)<br>
+                                <span>Profa. Dra. Aldenize Xavier (Reitora), Profa. Dra. Kelly Castro, entre outros.</span><br>
+                                Palestra Magna: Ciência, Inovação e Saúde na Amazônia (20:30 - 21:30)
+                                <span>Convidado FAPESPA</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="dia2" class="tab-content">
+            <div class="schedule-wrapper">
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th class="time-col">Dia 2<br>27/08</th>
+                            <th>Auditório Tapajós</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time-col">07:30 - 09:00</td>
+                            <td class="full-width-event" style="text-align: left;">Credenciamento</td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">09:00 - 10:00</td>
+                            <td>
+                                <div class="event-type">Mesa redonda</div>
+                                <div class="event-title">Inovação em medicamentos e cosméticos da Amazônia</div>
+                                <div class="event-speaker">Profa. Kariane Nunes (UFOPA) e Prof. Dr. Vitor Moutinho (Embrapii-UFOPA)</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">10:00 - 12:00</td>
+                            <td>
+                                <div class="event-type">Apresentação de Trabalho</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">12:00 - 14:00</td>
+                            <td class="full-width-event" style="text-align: left;">ALMOÇO</td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">14:00 - 15:30</td>
+                            <td>
+                                <div class="event-type">Mesa redonda</div>
+                                <div class="event-title">Saúde da Mulher na Amazônia: desafios, saberes, equidade e inovação no cuidado</div>
+                                <div class="event-speaker">Profª.Dra. Luana Rodrigues, Profª.Dra. Juliana Gagno e Profª. Dra. Marina Meschede</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">15:30 - 16:15</td>
+                            <td>
+                                <div class="event-type">Palestra</div>
+                                <div class="event-title">Nanotecnologias aplicadas ao desenvolvimento de fármacos</div>
+                                <div class="event-speaker">Prof. Dr. Emerson Silva Lima (UFAM)</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">16:15 - 16:30</td>
+                            <td class="full-width-event" style="text-align: left;">INTERVALO</td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">16:30 - 17:15</td>
+                            <td>
+                                <div class="event-type">Mesa redonda</div>
+                                <div class="event-title">Saberes tradicionais em saúde: vivências</div>
+                                <div class="event-speaker">Convidados especiais (Parteira, erveira, benzedeira e puxadeira)</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">17:15 - 18:00</td>
+                            <td>
+                                <div class="event-type">Palestra</div>
+                                <div class="event-title">Práticas Integrativas e Complementares em Saúde no SUS</div>
+                                <div class="event-speaker">Prof. Dr. Madson Ralide Fonseca (UNIFAP)</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">18:00 - 18:30</td>
+                            <td class="full-width-event" style="text-align: left;">COFFEE-BREAK</td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">19:00 - 21:30</td>
+                            <td>
+                                <div class="event-type">Apresentação de Trabalho</div>
+                                <div class="event-speaker">📍 Auditório Tapajós e Espaço do Restaurante Universitário</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="dia3" class="tab-content">
+            <div class="schedule-wrapper">
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th class="time-col">Dia 3<br>28/08</th>
+                            <th>Auditório Tapajós</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time-col">08:00 - 09:00</td>
+                            <td>
+                                <div class="event-type">Mesa redonda</div>
+                                <div class="event-title">Biodiversidade amazônica como fonte de desenvolvimento de novos medicamentos</div>
+                                <div class="event-speaker">Profª. Dra. Rosa Mourão, Prof. Dr. Cleydson Breno e Profª. Dra. Patrícia Danielle</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">09:00 - 10:00</td>
+                            <td>
+                                <div class="event-type">Palestra</div>
+                                <div class="event-title">Descoberta Racional de Fármacos Anticâncer: da modelagem aos ensaios</div>
+                                <div class="event-speaker">Prof. Dr. Emerson Silva Lima</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">10:00 - 10:15</td>
+                            <td class="full-width-event" style="text-align: left;">INTERVALO</td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">10:15 - 11:00</td>
+                            <td>
+                                <div class="event-type">Palestra</div>
+                                <div class="event-title">Ciência, Tecnologia e Saúde: estratégias para consolidação da pós-graduação</div>
+                                <div class="event-speaker">Prof. Dr. Thalis Ferreira dos Santos</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">11:00 - 12:00</td>
+                            <td>
+                                <div class="event-type">Palestra</div>
+                                <div class="event-title">Desafios da Saúde indígena na Amazônia Brasileira</div>
+                                <div class="event-speaker">Prof. Dr. Hernane Guimarães (UFOPA)</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">12:00 - 14:00</td>
+                            <td class="full-width-event" style="text-align: left;">ALMOÇO</td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">14:00 - 15:30</td>
+                            <td>
+                                <div class="event-type">Mesa redonda</div>
+                                <div class="event-title">Riscos da Contaminação por Mercúrio na Região Norte: impactos na saúde coletiva</div>
+                                <div class="event-speaker">Prof. Dr. Luis Reginaldo e Profª. Dra. Heloisa Meneses</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">15:30 - 15:45</td>
+                            <td class="full-width-event" style="text-align: left;">INTERVALO</td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">15:45 - 17:15</td>
+                            <td>
+                                <div class="event-type">Mesa redonda</div>
+                                <div class="event-title">Vozes da Pós-Graduação: ciência, inovação e transformação social</div>
+                                <div class="event-speaker">Discentes do curso de Pós-graduação em Ciências da Saúde</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">17:15 - 18:00</td>
+                            <td>
+                                <div class="event-type">Encerramento</div>
+                                <div class="event-title">Premiações do evento e encerramento oficial</div>
+                                <div class="event-speaker">Profª. Dra. Gabriela Bianchi</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">18:00 - 18:30</td>
+                            <td class="full-width-event" style="text-align: left;">Coffee-break e Apresentação cultural</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>© 2026 I Congresso em Ciências da Saúde na Amazônia – Todos os direitos reservados</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
