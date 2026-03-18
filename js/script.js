@@ -74,3 +74,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// -----------------------------------------------------------------
+    // C) CARROSSEL AUTOMÁTICO DO BANNER
+    // O que faz: Fica trocando a imagem principal do site a cada X segundos.
+    // -----------------------------------------------------------------
+    const slides = document.querySelectorAll('.hero-carousel .slide');
+    let currentSlide = 0;
+
+    if (slides.length > 0) {
+        setInterval(() => {
+            // Esconde a foto atual
+            slides[currentSlide].classList.remove('active');
+            
+            // Pula para a próxima (se chegou na última, volta para a primeira)
+            currentSlide = (currentSlide + 1) % slides.length;
+            
+            // Mostra a foto nova
+            slides[currentSlide].classList.add('active');
+        }, 4000); // 4000 = 4 segundos. Pode aumentar ou diminuir se quiser!
+    }

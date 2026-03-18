@@ -3,7 +3,7 @@
    ========================================= */
 :root {
     --primary-color: #0056b3;
-    --secondary-color: #004d40;
+    --secondary-color: #ffffff;
     --accent-color: #ff9800;
     --text-color: #333333;
     --bg-light: #f8f9fa;
@@ -41,7 +41,7 @@ footer { background-color: #1a1a1a; color: #ccc; text-align: center; padding: 20
    3. SEÇÃO HERO (BANNER PRINCIPAL)
    ========================================= */
 .hero { 
-    background: linear-gradient(rgba(0, 77, 64, 0.7), rgba(0, 86, 179, 0.7)), url('../img/banner.jpeg') center/cover; 
+    background: linear-gradient(rgb(255, 255, 255), rgba(0, 86, 179, 0.7)), url('../img/banner.jpeg') center/cover; 
     color: var(--white); 
     padding: 100px 20px; 
     text-align: center; 
@@ -161,4 +161,45 @@ footer { background-color: #1a1a1a; color: #ccc; text-align: center; padding: 20
     /* Datas e Abas ficam 1 por linha no celular */
     .dates-grid { grid-template-columns: 1fr; }
     .tabs-container { justify-content: center; }
+}
+
+/* =========================================
+   8. CARROSSEL DE IMAGENS (HERO - AJUSTE DE QUALIDADE)
+   ========================================= */
+.hero-carousel {
+    position: relative;
+    width: 100%;
+    height: 75vh; /* Altura do banner no computador */
+    overflow: hidden;
+    background-color: var(--secondary-color);
+}
+
+.hero-carousel .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* A MÁGICA AQUI 👇: 'contain' impede que a foto seja esticada! */
+    object-fit: contain; 
+    
+    /* Centraliza a foto no meio da tela */
+    object-position: center; 
+    
+    opacity: 0; /* Esconde as fotos por padrão */
+    transition: opacity 1.5s ease-in-out; /* Efeito fade suave de 1.5 segundos */
+    z-index: 1;
+}
+
+.hero-carousel .slide.active {
+    opacity: 1; /* Mostra apenas a foto que tem a classe 'active' */
+    z-index: 2;
+}
+
+/* Ajuste de altura para o celular */
+@media (max-width: 768px) {
+    .hero-carousel {
+        height: 45vh; /* Fica mais baixinho no celular pro botão ficar visível */
+    }
 }
