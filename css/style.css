@@ -2,9 +2,9 @@
    1. CONFIGURAÇÕES GERAIS E PALETA
    ========================================= */
 :root {
-    --primary-color: #0056b3;
-    --secondary-color: #ffffff;
-    --accent-color: #ff9800;
+    --primary-color: #04293B;   /* Seu Azul Escuro */
+    --secondary-color: #2E657D; /* Seu Azul Claro */
+    --accent-color: #ff9800;    
     --text-color: #333333;
     --bg-light: #f8f9fa;
     --white: #ffffff;
@@ -182,7 +182,7 @@ footer { background-color: #1a1a1a; color: #ccc; text-align: center; padding: 20
     height: 100%;
     
     /* A MÁGICA AQUI 👇: 'contain' impede que a foto seja esticada! */
-    object-fit: contain; 
+    object-fit: cover; 
     
     /* Centraliza a foto no meio da tela */
     object-position: center; 

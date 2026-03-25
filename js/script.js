@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const slides = document.querySelectorAll('.hero-carousel .slide');
     let currentSlide = 0;
 
-    if (slides.length > 0) {
+    if (slides.length > 1) {
         setInterval(() => {
             // Esconde a foto atual
             slides[currentSlide].classList.remove('active');
