@@ -20,14 +20,27 @@
             </div>
 
             <nav class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="apresentacao.html">Apresentação</a>
-                <a href="programacao.html" class="active">Programação</a>
+                <a href="index.html" class="active">Home</a>
+                
+                <div class="dropdown">
+                    <button class="dropbtn">O Evento <span style="font-size: 0.7rem;">▼</span></button>
+                    <div class="dropdown-content">
+                        <a href="apresentacao.html">Apresentação</a>
+                        <a href="datas.html">Datas Importantes</a>
+                        <a href="local.html">Local do Evento</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Programação <span style="font-size: 0.7rem;">▼</span></button>
+                    <div class="dropdown-content">
+                        <a href="programacao.html">Grade de Horários</a>
+                        <a href="#palestrantes">Palestrantes</a>
+                    </div>
+                </div>
+
                 <a href="voluntarios.html">Voluntários</a>
-                <a href="datas.html" class="active">Datas Importantes</a>
-                <a href="index.html#palestrantes">Palestrantes</a>
-                <a href="local.html" class="active">Local do Evento</a>
-                <a href="index.html#submissao" class="btn-subscribe">Inscreva-se</a>
+                <a href="#submissao" class="btn-subscribe">Inscreva-se</a>
             </nav>
         </div>
     </header>

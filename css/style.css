@@ -1,177 +1,134 @@
 /* =========================================
-   1. CONFIGURAÇÕES GERAIS E PALETA
+   1. CONFIGURAÇÕES GERAIS E PALETA (Nível Sênior)
    ========================================= */
 :root {
-    --primary-color: #04293B;   /* Seu Azul Escuro */
-    --secondary-color: #2E657D; /* Seu Azul Claro */
-    --accent-color: #ff9800;    
+    --primary-color: #04293B;   /* Azul Escuro */
+    --secondary-color: #2E657D; /* Azul Claro */
+    --accent-color: #2E657D;    /* Trocamos o amarelo pelo seu Azul Claro aqui! */
     --text-color: #333333;
-    --bg-light: #f8f9fa;
+    --text-light: #555555;
+    --bg-light: #F4F7F6;        
     --white: #ffffff;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-body { color: var(--text-color); background-color: var(--white); line-height: 1.6; position: relative; }
-a { text-decoration: none; color: inherit; }
-
-/* =========================================
-   2. CABEÇALHO (MENU) E RODAPÉ
-   ========================================= */
-header { background-color: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; width: 100%; }
-.nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; }
-.logo-img { height: 50px; width: auto; display: block; }
-
-/* Menu Desktop */
-.nav-links { display: flex; gap: 20px; font-size: 0.9rem; font-weight: 600; align-items: center; }
-.nav-links a:hover, .nav-links a.active { color: var(--primary-color); }
-.nav-links a.active { border-bottom: 2px solid var(--primary-color); padding-bottom: 5px; }
-
-/* Botão do menu Desktop */
-.btn-subscribe { background-color: var(--primary-color); color: var(--white) !important; padding: 8px 15px; border-radius: 4px; transition: 0.3s; margin-left: 10px; }
-.btn-subscribe:hover { background-color: #004494; }
-
-/* Hambúrguer (Escondido no Desktop) */
-.menu-toggle { display: none; cursor: pointer; }
-.menu-toggle span { display: block; width: 25px; height: 3px; margin: 5px auto; background-color: var(--text-color); transition: all 0.3s ease-in-out; }
-
-/* Footer */
-footer { background-color: #1a1a1a; color: #ccc; text-align: center; padding: 20px; font-size: 0.9rem; margin-top: auto; }
-
-/* =========================================
-   3. SEÇÃO HERO (BANNER PRINCIPAL)
-   ========================================= */
-.hero { 
-    background: linear-gradient(rgb(255, 255, 255), rgba(0, 86, 179, 0.7)), url('../img/banner.jpeg') center/cover; 
-    color: var(--white); 
-    padding: 100px 20px; 
-    text-align: center; 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.hero h1 { font-size: 2.8rem; margin-bottom: 20px; max-width: 900px; margin-left: auto; margin-right: auto; line-height: 1.2; }
-.hero h2 { font-size: 1.2rem; font-weight: 400; margin-bottom: 30px; color: #e0f7fa; }
-.hero-info { font-size: 1.1rem; font-weight: 600; margin-bottom: 40px; }
 
-/* Botões da Hero */
-.btn-hero { background-color: var(--accent-color); color: var(--white); padding: 15px 30px; font-size: 1.1rem; font-weight: 700; border-radius: 5px; display: inline-block; text-transform: uppercase; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: 0.2s; }
-.btn-hero:hover { transform: translateY(-2px); box-shadow: 0 6px 12px rgba(0,0,0,0.15); }
-
-/* Containers de botões específicos */
-.btn-hero-desktop { display: inline-block; } /* Mostra no Desktop */
-.btn-hero-mobile-container { display: none; } /* Esconde no Desktop */
-
-/* =========================================
-   4. SEÇÕES GERAIS E CARDS (Datas, Palestrantes)
-   ========================================= */
-.section-container { max-width: 1200px; margin: 60px auto; padding: 0 20px; }
-.section-title { text-align: center; color: var(--primary-color); font-size: 2rem; margin-bottom: 40px; text-transform: uppercase; }
-.section-title::after { content: ''; display: block; width: 60px; height: 3px; background-color: var(--accent-color); margin: 10px auto 0; }
-
-.dates-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; text-align: center; }
-.date-card { background-color: var(--bg-light); padding: 30px; border-radius: 8px; border-bottom: 4px solid var(--primary-color); box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-.date-card h3 { color: var(--accent-color); font-size: 1.5rem; margin-bottom: 10px; }
-.date-card p { font-weight: 600; color: #555; }
-
-.speakers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-.speaker-card { background: var(--white); border: 1px solid #eee; border-radius: 8px; padding: 20px; text-align: center; transition: 0.3s; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-.speaker-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); border-color: var(--primary-color); }
-.speaker-photo { width: 120px; height: 120px; background-color: #ddd; border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; color: #999; font-size: 0.8rem; }
-.speaker-name { font-size: 1.2rem; color: var(--primary-color); margin-bottom: 5px; }
-.speaker-title { font-size: 0.9rem; color: #666; margin-bottom: 15px; }
-.lattes-link { color: var(--primary-color); font-size: 0.85rem; font-weight: 600; text-decoration: underline; }
-
-/* =========================================
-   5. PÁGINA APRESENTAÇÃO E EQUIPE
-   ========================================= */
-.presentation-text { text-align: justify; font-size: 1.1rem; max-width: 900px; margin: 0 auto; line-height: 1.8; color: #555; }
-.presentation-text p { margin-bottom: 25px; }
-
-.team-list { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; margin-top: 20px; }
-.team-list li { background: var(--bg-light); padding: 15px; border-left: 4px solid var(--secondary-color); border-radius: 4px; font-size: 0.95rem; }
-.team-list strong { display: block; color: var(--primary-color); font-size: 1.05rem; }
-
-.sponsors { background-color: var(--bg-light); padding: 60px 20px; text-align: center; }
-.sponsor-tier { margin-bottom: 30px; }
-.sponsor-tier h4 { color: #777; margin-bottom: 15px; text-transform: uppercase; font-size: 0.9rem; }
-.sponsor-logos { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; font-weight: bold; color: var(--primary-color); font-size: 1.2rem; }
-
-/* =========================================
-   6. PÁGINA DE PROGRAMAÇÃO (TABELA E ABAS)
-   ========================================= */
-.schedule-wrapper { overflow-x: auto; margin-bottom: 50px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-radius: 8px; }
-.schedule-table { width: 100%; min-width: 1000px; border-collapse: collapse; background-color: var(--white); font-size: 0.9rem; }
-.schedule-table th, .schedule-table td { border: 1px solid #dee2e6; padding: 15px; vertical-align: top; }
-.schedule-table th { background-color: #f8f9fa; text-align: center; color: var(--primary-color); font-weight: 700; }
-.time-col { font-weight: bold; text-align: center; vertical-align: middle !important; width: 100px; color: var(--text-color); }
-.event-type { font-weight: bold; color: var(--text-color); margin-bottom: 5px; font-size: 0.95rem; }
-.event-title { font-style: italic; color: #555; margin-bottom: 10px; line-height: 1.4; }
-.event-speaker { font-size: 0.85rem; color: #777; margin-bottom: 15px; }
-.btn-details { background-color: #00897b; color: white; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer; font-size: 0.8rem; font-weight: bold; width: 100%; transition: 0.2s; }
-.btn-details:hover { background-color: #00695c; }
-.full-width-event { text-align: center; font-weight: bold; vertical-align: middle !important; padding: 20px !important; background-color: var(--bg-light); }
-.full-width-event span { display: block; font-weight: normal; font-size: 0.85rem; color: #555; margin-top: 5px; }
-
-/* Abas de Navegação (Programação) */
-.tabs-container { display: flex; gap: 10px; margin-bottom: 20px; justify-content: flex-start; flex-wrap: wrap; }
-.tab-btn { background-color: #00897b; color: var(--white); border: none; padding: 12px 24px; border-radius: 5px; font-weight: bold; cursor: pointer; transition: 0.3s; font-size: 1rem; }
-.tab-btn:hover { background-color: #00695c; }
-.tab-btn.active { background-color: var(--primary-color); }
-.tab-content { display: none; animation: fadeIn 0.5s; }
-.tab-content.active { display: block; }
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-light);
+    line-height: 1.6;
 }
 
 /* =========================================
-   7. RESPONSIVIDADE (CELULARES)
+   2. CABEÇALHO ESCURO E ELEGANTE
    ========================================= */
-@media (max-width: 768px) {
-    /* Menu Hambúrguer aparece */
-    .menu-toggle { display: block; z-index: 1001; }
-    
-    /* Links escondem e viram lista vertical */
-    .nav-links { position: absolute; top: 100%; left: 0; width: 100%; background-color: var(--white); display: none; flex-direction: column; padding: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: left; gap: 15px; }
-    .nav-links a { width: 100%; padding: 10px; border-bottom: 1px solid #eee; }
-    .nav-links a:last-child { border-bottom: none; }
-    .nav-links a.active { border-bottom: none; color: var(--primary-color); padding-left: 10px; }
+header {
+    background-color: var(--primary-color);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-    /* Ativa o menu hambúrguer clicado */
-    .nav-links.active { display: flex; }
-    .menu-toggle.is-active span:nth-child(1) { transform: rotate(-45deg) translate(-5px, 6px); }
-    .menu-toggle.is-active span:nth-child(2) { opacity: 0; }
-    .menu-toggle.is-active span:nth-child(3) { transform: rotate(45deg) translate(-5px, -6px); }
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    /* Esconde o botão original do menu */
-    .btn-subscribe { display: none; }
-    
-    /* Ajustes na Hero (Texto menor) */
-    .hero { padding: 80px 15px; }
-    .hero h1 { font-size: 2rem; margin-bottom: 15px; }
-    .hero h2 { font-size: 1.1rem; margin-bottom: 25px; }
-    .hero-info { font-size: 1rem; margin-bottom: 35px; }
+.logo-img {
+    height: 60px;
+    background-color: var(--white); /* Fundo branco pra logo destacar no azul escuro */
+    padding: 5px;
+    border-radius: 8px;
+}
 
-    /* Troca qual botão da Hero aparece */
-    .btn-hero-desktop { display: none; } 
-    
-    /* Mostra e centraliza o botão específico para celular */
-    .btn-hero-mobile-container { display: flex; justify-content: center; width: 100%; margin-top: -20px; } 
-    .btn-hero-mobile { background-color: var(--white); color: var(--primary-color); border: 2px solid var(--primary-color); padding: 12px 25px; font-size: 1rem; }
-    .btn-hero-mobile:hover { background-color: #f0f0f0; }
+.nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
 
-    /* Datas e Abas ficam 1 por linha no celular */
-    .dates-grid { grid-template-columns: 1fr; }
-    .tabs-container { justify-content: center; }
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    opacity: 0.85;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--accent-color);
+    opacity: 1;
+}
+
+/* Botão de Inscrição no Menu */
+.nav-links .btn-subscribe {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-weight: 700;
+    opacity: 1;
+    box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3);
+}
+
+.nav-links .btn-subscribe:hover {
+    background-color: var(--white);
+    color: var(--primary-color);
+    transform: translateY(-2px);
 }
 
 /* =========================================
-   8. CARROSSEL DE IMAGENS (HERO - AJUSTE DE QUALIDADE)
+   3. ESTRUTURA GLOBAL E TÍTULOS
+   ========================================= */
+.section-container {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+/* Títulos com detalhe dourado embaixo */
+.section-title {
+    color: var(--primary-color);
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+
+/* =========================================
+   4. CARROSSEL / BANNER
    ========================================= */
 .hero-carousel {
-    position: relative;
     width: 100%;
-    height: 75vh; /* Altura do banner no computador */
+    height: 70vh; /* Altura imponente */
+    position: relative;
     overflow: hidden;
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
 }
 
 .hero-carousel .slide {
@@ -180,26 +137,237 @@ footer { background-color: #1a1a1a; color: #ccc; text-align: center; padding: 20
     left: 0;
     width: 100%;
     height: 100%;
-    
-    /* A MÁGICA AQUI 👇: 'contain' impede que a foto seja esticada! */
-    object-fit: cover; 
-    
-    /* Centraliza a foto no meio da tela */
-    object-position: center; 
-    
-    opacity: 0; /* Esconde as fotos por padrão */
-    transition: opacity 1.5s ease-in-out; /* Efeito fade suave de 1.5 segundos */
+    object-fit: cover;
+    object-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
     z-index: 1;
 }
 
 .hero-carousel .slide.active {
-    opacity: 1; /* Mostra apenas a foto que tem a classe 'active' */
-    z-index: 2;
+    opacity: 1;
 }
 
-/* Ajuste de altura para o celular */
-@media (max-width: 768px) {
-    .hero-carousel {
-        height: 45vh; /* Fica mais baixinho no celular pro botão ficar visível */
+/* =========================================
+   5. CARDS (Palestrantes e Datas)
+   ========================================= */
+.speakers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.speaker-card {
+    background: var(--white);
+    padding: 40px 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 5px solid var(--secondary-color);
+}
+
+.speaker-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.speaker-photo {
+    width: 120px;
+    height: 120px;
+    background-color: var(--bg-light);
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    border: 3px solid var(--accent-color);
+}
+
+.speaker-name {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.speaker-title {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.lattes-link {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: var(--bg-light);
+    color: var(--secondary-color);
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.lattes-link:hover {
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+/* =========================================
+   6. RODAPÉ
+   ========================================= */
+footer {
+    background-color: var(--primary-color);
+    color: rgba(255,255,255,0.7);
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.9rem;
+    margin-top: 80px;
+}
+
+/* =========================================
+   7. MENUS DROPDOWN (Gavetas)
+   ========================================= */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    opacity: 0.85;
+    transition: 0.3s;
+}
+
+.dropbtn:hover {
+    color: var(--accent-color);
+    opacity: 1;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--white);
+    min-width: 220px;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 1000;
+    top: 100%;
+    left: 0;
+    border-top: 3px solid var(--accent-color);
+}
+
+.dropdown-content a {
+    color: var(--text-color) !important; /* Força a cor escura no PC */
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.9rem;
+    transition: 0.2s;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--bg-light);
+    color: var(--primary-color) !important;
+    padding-left: 25px; /* Dá um "pulinho" pra direita chiquérrimo ao passar o mouse */
+}
+
+/* Faz a gaveta aparecer ao passar o mouse */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* =========================================
+   8. RESPONSIVIDADE (MOBILE) - Gatilho Antecipado
+   ========================================= */
+/* Aumentamos para 1024px: notebooks pequenos e tablets já pegam o menu de hambúrguer */
+@media (max-width: 1024px) {
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
     }
+
+    .menu-toggle span {
+        width: 28px;
+        height: 3px;
+        background-color: var(--white);
+        border-radius: 2px;
+        transition: 0.3s;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-color);
+        padding: 10px 0 30px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        align-items: flex-start; /* Alinha tudo à esquerda no celular */
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links > a, .dropdown {
+        padding: 12px 20px;
+        width: 100%;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+        text-align: left;
+    }
+
+    .dropbtn {
+        width: 100%;
+        padding: 0;
+        justify-content: space-between; /* Coloca a setinha lá no canto direito */
+    }
+
+    /* Como o menu se comporta dentro do celular */
+    .dropdown-content {
+        position: relative;
+        box-shadow: none;
+        background-color: rgba(0,0,0,0.15); /* Fundo um pouco mais escuro pra destacar */
+        border-radius: 0;
+        border-top: none;
+        margin-top: 10px;
+    }
+
+    .dropdown-content a {
+        color: var(--white) !important; /* Volta a ser branco no celular */
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+        padding-left: 40px; /* Dá um recuo maior pra mostrar que é sub-item */
+    }
+
+    .dropdown-content a:hover {
+        background-color: transparent;
+        padding-left: 45px;
+        color: var(--accent-color) !important;
+    }
+
+    .hero-carousel { height: 50vh; }
+    .section-title { font-size: 1.8rem; }
+    .section-container { margin-top: 40px; }
+}
+
+@media (min-width: 1025px) {
+    .menu-toggle { display: none; }
 }
