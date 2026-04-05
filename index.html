@@ -20,21 +20,21 @@
             </div>
             
             <nav class="nav-links">
-                <a href="index.html" class="active">Home</a>
+                <a href="#home" class="active">Home</a>
                 
                 <div class="dropdown">
                     <button class="dropbtn">O Evento <span style="font-size: 0.7rem;">▼</span></button>
                     <div class="dropdown-content">
-                        <a href="apresentacao.html">Apresentação</a>
-                        <a href="datas.html">Datas Importantes</a>
-                        <a href="local.html">Local do Evento</a>
+                        <a href="#apresentacao">Apresentação</a>
+                        <a href="#datas">Datas Importantes</a>
+                        <a href="#local">Local do Evento</a>
                     </div>
                 </div>
 
                 <div class="dropdown">
-                    <button class="dropbtn">Programação <span style="font-size: 0.7rem;">▼</span></button>
+                    <button class="dropbtn" style="color: var(--accent-color);">Programação <span style="font-size: 0.7rem;">▼</span></button>
                     <div class="dropdown-content">
-                        <a href="programacao.html">Grade de Horários</a>
+                        <a href="#programacao" style="color: var(--primary-color) !important; font-weight: bold;">Grade de Horários</a>
                         <a href="#palestrantes">Palestrantes</a>
                     </div>
                 </div>
@@ -45,26 +45,115 @@
         </div>
     </header>
 
-    <section class="hero" style="position: relative; padding: 0;">
+    <section id="home" class="hero hero-home">
         <div class="hero-carousel">
             <img src="img/slide1.jpeg" class="slide active" alt="Slide Boto">
         </div>
     </section>
 
-    <section class="section-container" style="text-align: center; background: var(--white); padding: 60px 40px; border-radius: 15px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); margin-top: -60px; position: relative; z-index: 10;">
-        <h2 class="section-title" style="margin-bottom: 30px;">Bem-vindos ao ICSA 2026</h2>
-        
-        <p style="font-size: 1.15rem; color: var(--text-light); max-width: 800px; margin: 0 auto 35px; line-height: 1.8;">
-            É com grande entusiasmo que anunciamos o <strong>I Congresso em Ciências da Saúde na Amazônia</strong>. 
-            Um espaço dedicado a promover o intercâmbio científico, a inovação e o debate sobre os desafios e as práticas de saúde na nossa região. Venha fazer parte deste marco histórico na UFOPA!
-        </p>
-
-        <a href="apresentacao.html" style="background-color: var(--secondary-color); color: var(--white); padding: 14px 35px; border-radius: 30px; font-weight: bold; text-transform: uppercase; font-size: 0.95rem; text-decoration: none; display: inline-block; transition: 0.3s; box-shadow: 0 4px 15px rgba(46, 101, 125, 0.4);">
-            Ler Apresentação Completa
-        </a>
+    <section id="apresentacao" class="section-container apresentacao-section scroll-section">
+        <h2 class="section-title">Apresentação</h2>
+        <div class="apresentacao-text">
+            <p>É com grande entusiasmo que anunciamos o <strong>I Congresso em Ciências da Saúde na Amazônia</strong>, que ocorrerá na cidade de Santarém, PA, entre os dias 26 e 28 de agosto de 2026. Com o tema central "Interfaces entre Saúde Coletiva, Inovação Terapêutica e Saberes Tradicionais", esta edição será uma oportunidade ímpar para promover debates e reflexões sobre as responsabilidades e potencialidades da saúde em nossa região.</p>
+            <p>A Amazônia apresenta desafios singulares no campo da saúde, marcados por desigualdades sociais, diversidade cultural, dificuldades de acesso aos serviços e especificidades epidemiológicas.</p>
+            <p>O <strong>ICSA 2026</strong> reunirá renomados especialistas, estudantes e profissionais da saúde para um diálogo interdisciplinar. O programa científico abordará avanços divididos em duas grandes áreas: Saúde Coletiva e Inovação Terapêutica.</p>
+            <p>Acreditamos que o Congresso fortalecerá a produção científica regional. A cidade de Santarém, através da Universidade Federal do Oeste do Pará (UFOPA), será o cenário profícuo para fomentar parcerias estratégicas.</p>
+        </div>
     </section>
 
-    <section id="palestrantes" class="section-container">
+    <section id="datas" class="section-container scroll-section">
+        <h2 class="section-title">Datas Importantes</h2>
+        <div class="datas-grid">
+            <div class="data-card">
+                <div class="data-badge bg-secondary">25/04/2026</div>
+                <div class="data-icon">📝</div>
+                <h3>Abertura das Inscrições</h3>
+            </div>
+            <div class="data-card">
+                <div class="data-badge bg-secondary">26/05/2026</div>
+                <div class="data-icon">📤</div>
+                <h3>Início das Submissões</h3>
+            </div>
+            <div class="data-card">
+                <div class="data-badge bg-secondary">15/07/2026</div>
+                <div class="data-icon">🛑</div>
+                <h3>Fim das Submissões</h3>
+            </div>
+            <div class="data-card">
+                <div class="data-badge bg-primary">26/08/2026</div>
+                <div class="data-icon">🎉</div>
+                <h3>Início do Evento</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="programacao" class="section-container scroll-section">
+        <h2 class="section-title">Programação Detalhada</h2>
+        
+        <div class="tabs-container">
+            <button class="tab-btn active" onclick="abrirDia('dia1', this)">Dia 01 (26/08)</button>
+            <button class="tab-btn" onclick="abrirDia('dia2', this)">Dia 02 (27/08)</button>
+            <button class="tab-btn" onclick="abrirDia('dia3', this)">Dia 03 (28/08)</button>
+        </div>
+
+        <div id="dia1" class="tab-content active">
+            <p class="tab-aviso">📝 Credenciamento (17:00 - 20:00) | Auditório Tapajós</p>
+            <div class="time-block">
+                <div class="time-header">🕒 08:00 - 12:00</div>
+                <div class="activities-grid">
+                    <div class="activity-card"><h4 class="activity-title">Minicurso: Auriculoterapia</h4><p class="activity-speaker">🎤 Prof. Dr. Madson Gomes</p><span class="activity-location">📍 Núcleo Tecnológico</span></div>
+                    <div class="activity-card"><h4 class="activity-title">Minicurso: Perfumaria com essências</h4><p class="activity-speaker">🎤 Dra. Adriele Miranda</p><span class="activity-location">📍 Farmácia Universitária</span></div>
+                    <div class="activity-card"><h4 class="activity-title">Minicurso: Uso de bases de dados</h4><p class="activity-speaker">🎤 Prof. Dr. Hernane Guimarães</p><span class="activity-location">📍 Lab. Informática</span></div>
+                    <div class="activity-card"><h4 class="activity-title">Minicurso: Loções com manteigas</h4><p class="activity-speaker">🎤 Profª. Dra. Kariane Nunes</p><span class="activity-location">📍 Lab. Farmacotécnica</span></div>
+                    <div class="activity-card"><h4 class="activity-title">Minicurso: Noções de Primeiros Socorros</h4><p class="activity-speaker">🎤 Enfermeiro Antenor Matos</p><span class="activity-location">📍 Miniauditório</span></div>
+                    <div class="activity-card"><h4 class="activity-title">Minicurso: Reflexologia Podal</h4><p class="activity-speaker">🎤 SMS Santarém</p><span class="activity-location">📍 Sala de Aula</span></div>
+                </div>
+            </div>
+            <div class="time-block"><div class="time-header">🕒 14:00 - 18:00</div><div class="activities-grid"><div class="activity-card"><h4 class="activity-title">Perícias Criminais: Áreas de atuação na Amazônia</h4><p class="activity-speaker">🎤 Me. Douglas Avelar</p><span class="activity-location">📍 Núcleo Tecnológico</span></div><div class="activity-card"><h4 class="activity-title">Minicurso: Biossegurança laboratorial</h4><p class="activity-speaker">🎤 Me. Adenilson Barroso</p><span class="activity-location">📍 Farmácia Universitária</span></div><div class="activity-card"><h4 class="activity-title">Minicurso: Estatística com Graph Prism</h4><p class="activity-speaker">🎤 Msc. Amanda Esquerdo</p><span class="activity-location">📍 Lab. Informática</span></div><div class="activity-card"><h4 class="activity-title">Minicurso: Avaliação clínica de lesões</h4><p class="activity-speaker">🎤 Perito Alexandre Azevedo</p><span class="activity-location">📍 Miniauditório</span></div><div class="activity-card"><h4 class="activity-title">Minicurso: Redação científica</h4><p class="activity-speaker">🎤 Prof. Dr. Lincoln Correa</p><span class="activity-location">📍 Sala de Aula</span></div></div></div>
+            <div class="time-block"><div class="time-header" style="background-color: var(--accent-color);">🌟 19:00 - 21:30 (Abertura Oficial)</div><div class="activities-grid"><div class="activity-card"><h4 class="activity-title">Apresentação Cultural (19:00 - 19:30)</h4><p class="activity-speaker">🎤 Grupo de Carimbó Raízes Amazônicas</p></div><div class="activity-card"><h4 class="activity-title">Cerimônia de Abertura (19:30 - 20:30)</h4><p class="activity-speaker">🎤 Profa. Dra. Aldenize Xavier, Profa. Dra. Kelly Castro e convidados</p></div><div class="activity-card"><h4 class="activity-title">Palestra Magna: Ciência, Inovação e Saúde na Amazônia (20:30)</h4><p class="activity-speaker">🎤 Convidado FAPESPA</p></div></div></div>
+        </div>
+
+        <div id="dia2" class="tab-content">
+            <p class="tab-aviso">*Todas as atividades deste dia ocorrerão no <strong>Auditório Tapajós</strong>.</p>
+            <div class="time-block"><div class="time-header">🕒 Manhã</div><div class="activities-grid grid-1-col"><div class="activity-card card-destaque"><h4 class="activity-title">07:30 - 09:00 | Credenciamento</h4></div><div class="activity-card"><span class="activity-location">09:00 - 10:00</span><h4 class="activity-title">Mesa redonda: Inovação em medicamentos e cosméticos da Amazônia</h4><p class="activity-speaker">🎤 Profa. Kariane Nunes e Prof. Dr. Vitor Moutinho</p></div><div class="activity-card"><span class="activity-location">10:00 - 12:00</span><h4 class="activity-title">Apresentação de Trabalhos</h4></div><div class="activity-card card-destaque"><h4 class="activity-title">🍽️ 12:00 - 14:00 | ALMOÇO</h4></div></div></div>
+            <div class="time-block"><div class="time-header">🕒 Tarde / Noite</div><div class="activities-grid grid-1-col"><div class="activity-card"><span class="activity-location">14:00 - 15:30</span><h4 class="activity-title">Mesa redonda: Saúde da Mulher na Amazônia</h4><p class="activity-speaker">🎤 Profª. Dra. Luana Rodrigues, Juliana Gagno e Marina Meschede</p></div><div class="activity-card"><span class="activity-location">15:30 - 16:15</span><h4 class="activity-title">Palestra: Nanotecnologias aplicadas ao desenvolvimento de fármacos</h4><p class="activity-speaker">🎤 Prof. Dr. Emerson Silva Lima (UFAM)</p></div><div class="activity-card card-destaque"><h4 class="activity-title">☕ 16:15 - 16:30 | INTERVALO</h4></div><div class="activity-card"><span class="activity-location">16:30 - 17:15</span><h4 class="activity-title">Mesa redonda: Saberes tradicionais em saúde: vivências</h4><p class="activity-speaker">🎤 Convidados especiais</p></div><div class="activity-card"><span class="activity-location">17:15 - 18:00</span><h4 class="activity-title">Palestra: Práticas Integrativas no SUS</h4><p class="activity-speaker">🎤 Prof. Dr. Madson Ralide Fonseca (UNIFAP)</p></div><div class="activity-card card-destaque"><h4 class="activity-title">☕ 18:00 - 18:30 | COFFEE-BREAK</h4></div><div class="activity-card"><span class="activity-location">19:00 - 21:30</span><h4 class="activity-title">Apresentação de Trabalhos</h4></div></div></div>
+        </div>
+
+        <div id="dia3" class="tab-content">
+            <p class="tab-aviso">*Todas as atividades deste dia ocorrerão no <strong>Auditório Tapajós</strong>.</p>
+            <div class="time-block"><div class="time-header">🕒 Manhã</div><div class="activities-grid grid-1-col"><div class="activity-card"><span class="activity-location">08:00 - 09:00</span><h4 class="activity-title">Mesa redonda: Biodiversidade amazônica</h4><p class="activity-speaker">🎤 Profª. Dra. Rosa Mourão, Cleydson Breno e Patrícia Danielle</p></div><div class="activity-card"><span class="activity-location">09:00 - 10:00</span><h4 class="activity-title">Palestra: Descoberta Racional de Fármacos</h4><p class="activity-speaker">🎤 Prof. Dr. Emerson Silva Lima</p></div><div class="activity-card card-destaque"><h4 class="activity-title">☕ 10:00 - 10:15 | INTERVALO</h4></div><div class="activity-card"><span class="activity-location">10:15 - 11:00</span><h4 class="activity-title">Palestra: Ciência, Tecnologia e Saúde</h4><p class="activity-speaker">🎤 Prof. Dr. Thalis Ferreira dos Santos</p></div><div class="activity-card"><span class="activity-location">11:00 - 12:00</span><h4 class="activity-title">Palestra: Desafios da Saúde indígena</h4><p class="activity-speaker">🎤 Prof. Dr. Hernane Guimarães</p></div><div class="activity-card card-destaque"><h4 class="activity-title">🍽️ 12:00 - 14:00 | ALMOÇO</h4></div></div></div>
+            <div class="time-block"><div class="time-header">🕒 Tarde</div><div class="activities-grid grid-1-col"><div class="activity-card"><span class="activity-location">14:00 - 15:30</span><h4 class="activity-title">Mesa redonda: Contaminação por Mercúrio</h4><p class="activity-speaker">🎤 Prof. Dr. Luis Reginaldo e Profª. Dra. Heloisa Meneses</p></div><div class="activity-card card-destaque"><h4 class="activity-title">☕ 15:30 - 15:45 | INTERVALO</h4></div><div class="activity-card"><span class="activity-location">15:45 - 17:15</span><h4 class="activity-title">Mesa redonda: Vozes da Pós-Graduação</h4><p class="activity-speaker">🎤 Discentes do PPGCSA</p></div><div class="activity-card"><span class="activity-location">17:15 - 18:00</span><h4 class="activity-title">Encerramento Oficial</h4><p class="activity-speaker">🎤 Profª. Dra. Gabriela Bianchi</p></div><div class="activity-card card-destaque"><h4 class="activity-title">🎉 18:00 - 18:30 | Coffee-break e Apresentação</h4></div></div></div>
+        </div>
+    </section>
+
+    <div id="local" class="local-wrapper scroll-section">
+        <section class="section-container" style="margin: 0 auto; padding-top: 0;">
+            <h2 class="section-title title-light">Local do Evento</h2>
+            
+            <div class="local-header">
+                <h3>Santarém - Pará</h3>
+                <h4>UFOPA - Campus Tapajós</h4>
+                <p class="highlight-text">Auditório da Unidade Tapajós (Laranjão)</p>
+                <p class="sub-text">R. Vera Paz, s/n - Salé, Santarém - PA</p>
+            </div>
+
+            <div class="local-grid">
+                <div class="local-card local-img">
+                    <img src="img/auditorio.jpeg" alt="Auditório Laranjão UFOPA">
+                </div>
+                
+                <div class="local-card local-info">
+                    <h4>Acessibilidade e Estrutura</h4>
+                    <p>Capacidade para 400 pessoas. O local conta com acessibilidade total, elevadores, tradução simultânea em LIBRAS e um espaço dedicado de recreação e bem-estar.</p>
+                    
+                    <h4>Como Chegar</h4>
+                    <p>✈️ <strong>Aeroporto Internacional de Santarém</strong><br>Aprox. 20min de carro (13 km) do Campus.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section id="palestrantes" class="section-container scroll-section">
         <h2 class="section-title">Palestrantes Confirmados</h2>
         <div class="speakers-grid">
             <div class="speaker-card">
@@ -82,19 +171,18 @@
         </div>
     </section>
 
-    <section id="colaboradores" class="section-container" style="background: var(--white); padding: 60px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.03);">
+    <section id="colaboradores" class="section-container comissao-section scroll-section">
         <h2 class="section-title">Comissão Organizadora</h2>
         
-        <div style="text-align: center; margin: 0 auto 50px; max-width: 600px; background: var(--secondary-color); color: var(--white); padding: 30px; border-radius: 12px; box-shadow: 0 10px 25px rgba(46, 101, 125, 0.3);">
-            <h3 style="font-size: 1.5rem; margin-bottom: 5px;">Profª. Dra. Gabriela Bianchi dos Santos</h3>
-            <p style="font-size: 1rem; opacity: 0.9; font-weight: 300;">Idealizadora do Evento e Coordenadora do PPGCSA / UFOPA</p>
+        <div class="comissao-highlight">
+            <h3>Profª. Dra. Gabriela Bianchi dos Santos</h3>
+            <p>Idealizadora do Evento e Coordenadora do PPGCSA / UFOPA</p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; align-items: start;">
-            
-            <div style="background: var(--bg-light); padding: 25px; border-radius: 10px; border-top: 4px solid var(--primary-color);">
-                <h4 style="color: var(--primary-color); font-size: 1.2rem; margin-bottom: 20px; text-transform: uppercase;">🔬 Comissão Científica</h4>
-                <div style="display: flex; flex-direction: column; gap: 12px; font-size: 0.95rem;">
+        <div class="comissao-grid">
+            <div class="comissao-card border-primary">
+                <h4>🔬 Comissão Científica</h4>
+                <div class="comissao-list">
                     <p><strong>Deliane dos Santos Soares</strong></p>
                     <p><strong>Ananda Emilly de Oliveira Brito</strong></p>
                     <p><strong>Brenda Campos Uchoa</strong></p>
@@ -108,9 +196,9 @@
                 </div>
             </div>
 
-            <div style="background: var(--bg-light); padding: 25px; border-radius: 10px; border-top: 4px solid var(--accent-color);">
-                <h4 style="color: var(--primary-color); font-size: 1.2rem; margin-bottom: 20px; text-transform: uppercase;">⚙️ Infraestrutura</h4>
-                <div style="display: flex; flex-direction: column; gap: 12px; font-size: 0.95rem;">
+            <div class="comissao-card border-accent">
+                <h4>⚙️ Infraestrutura</h4>
+                <div class="comissao-list">
                     <p><strong>Felipe Jordir dos Santos Gomes</strong></p>
                     <p><strong>Maíra Sophia Ribeiro de Araújo</strong></p>
                     <p><strong>Moniky Rayanne Silva dos Santos</strong></p>
@@ -126,9 +214,9 @@
                 </div>
             </div>
 
-            <div style="background: var(--bg-light); padding: 25px; border-radius: 10px; border-top: 4px solid var(--secondary-color);">
-                <h4 style="color: var(--primary-color); font-size: 1.2rem; margin-bottom: 20px; text-transform: uppercase;">📱 Divulgação / Mídia</h4>
-                <div style="display: flex; flex-direction: column; gap: 12px; font-size: 0.95rem;">
+            <div class="comissao-card border-secondary">
+                <h4>📱 Divulgação / Mídia</h4>
+                <div class="comissao-list">
                     <p><strong>Joaquim Costa Rosa</strong></p>
                     <p><strong>Sabrina do Carmo Vieira Pereira</strong></p>
                     <p><strong>Ana Shizue Odane Rodrigues Campos</strong></p>
@@ -136,34 +224,27 @@
                     <p><strong>Alessandro Benevides da Fonseca</strong></p>
                 </div>
             </div>
-
         </div>
     </section>
 
-    <section class="section-container" style="text-align: center; margin-bottom: 60px; padding-top: 40px; border-top: 1px solid rgba(0,0,0,0.05);">
-        
-        <div style="margin-bottom: 50px;">
-            <h4 style="color: var(--text-light); text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 30px;">Realização</h4>
-            <div style="display: flex; justify-content: center; align-items: center; gap: 50px; flex-wrap: wrap;">
-                <img src="img/logo-ufopa.png" alt="Universidade Federal do Oeste do Pará - UFOPA" style="height: 85px; object-fit: contain;">
-                
-                <img src="img/logo-isco.png" alt="Instituto de Saúde Coletiva - ISCO" style="height: 85px; object-fit: contain;">
-                
-                <img src="img/logo-ppgcsa.png" alt="Programa de Pós-Graduação em Ciências da Saúde na Amazônia - PPGCSA" style="height: 85px; object-fit: contain;">
+    <section class="section-container realizacao-section">
+        <div class="logos-block">
+            <h4>Realização</h4>
+            <div class="logos-grid">
+                <img src="img/logo-ufopa.png" alt="UFOPA">
+                <img src="img/logo-isco.png" alt="ISCO">
+                <img src="img/logo-ppgcsa.png" alt="PPGCSA">
             </div>
         </div>
         
-        <div>
-            <h4 style="color: var(--text-light); text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 30px;">Parcerias</h4>
-            <div style="display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap;">
-                <img src="img/logo-cff.png" alt="Conselho Federal de Farmácia" style="height: 70px; object-fit: contain; filter: grayscale(100%); opacity: 0.7; transition: 0.3s;" onmouseover="this.style.filter='none'; this.style.opacity='1'" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.7'">
-                
-                <img src="img/logo-uepa.png" alt="UEPA" style="height: 70px; object-fit: contain; filter: grayscale(100%); opacity: 0.7; transition: 0.3s;" onmouseover="this.style.filter='none'; this.style.opacity='1'" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.7'">
-                
-                <img src="img/logo-sms.png" alt="SMS Santarém" style="height: 70px; object-fit: contain; filter: grayscale(100%); opacity: 0.7; transition: 0.3s;" onmouseover="this.style.filter='none'; this.style.opacity='1'" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.7'">
+        <div class="logos-block">
+            <h4>Parcerias</h4>
+            <div class="logos-grid logos-parceria">
+                <img src="img/logo-cff.png" alt="Conselho Federal de Farmácia">
+                <img src="img/logo-uepa.png" alt="UEPA">
+                <img src="img/logo-sms.png" alt="SMS Santarém">
             </div>
         </div>
-
     </section>
 
     <footer>

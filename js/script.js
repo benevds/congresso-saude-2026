@@ -115,3 +115,18 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById(diaId).classList.add("active");
         elementoBotao.classList.add("active");
     };
+
+// -----------------------------------------------------------------
+    // E) HEADER TRANSPARENTE PARA AZUL ESCURO
+    // -----------------------------------------------------------------
+    const cabecalho = document.querySelector("header");
+
+    window.addEventListener("scroll", function() {
+        // Se a pessoa rolar mais de 50 pixels para baixo...
+        if (window.scrollY > 50) {
+            cabecalho.classList.add("header-scrolled"); // Fica Azul
+        } else {
+            // Se ela voltar para o topo (menos de 50 pixels)...
+            cabecalho.classList.remove("header-scrolled"); // Fica Transparente
+        }
+    });
