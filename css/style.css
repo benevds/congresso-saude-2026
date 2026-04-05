@@ -703,6 +703,12 @@ footer {
     }
 
     .hero-carousel { height: 50vh; }
+    
+    /* AQUI ESTÁ O AJUSTE MÁGICO DA FOTO PARA O CELULAR! */
+    .hero-carousel .slide {
+        object-position: 25% center; 
+    }
+
     .section-title { font-size: 1.8rem; }
     .section-container { margin-top: 40px; }
     
