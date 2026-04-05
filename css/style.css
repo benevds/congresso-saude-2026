@@ -371,3 +371,116 @@ footer {
 @media (min-width: 1025px) {
     .menu-toggle { display: none; }
 }
+
+/* =========================================
+   9. PÁGINA DE PROGRAMAÇÃO (Timeline e Tabs)
+   ========================================= */
+/* Botões dos Dias */
+.tabs-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    background-color: var(--white);
+    color: var(--primary-color);
+    border: 2px solid var(--secondary-color);
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn.active, .tab-btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    box-shadow: 0 4px 10px rgba(46, 101, 125, 0.3);
+}
+
+/* Esconder os dias que não estão clicados */
+.tab-content {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Bloco de Horário (A Linha do Tempo) */
+.time-block {
+    margin-bottom: 40px;
+}
+
+.time-header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Grid de Cartões de Atividades Simultâneas */
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* O Cartão do Minicurso/Palestra */
+.activity-card {
+    background: var(--white);
+    border-left: 5px solid var(--secondary-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+.activity-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.activity-title {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.activity-speaker {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.activity-location {
+    display: inline-block;
+    background-color: var(--bg-light);
+    color: var(--secondary-color);
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 20px;
+    border: 1px solid rgba(46, 101, 125, 0.2);
+}

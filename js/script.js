@@ -94,3 +94,24 @@ document.addEventListener('DOMContentLoaded', () => {
             slides[currentSlide].classList.add('active');
         }, 4000); // 4000 = 4 segundos. Pode aumentar ou diminuir se quiser!
     }
+
+    // -----------------------------------------------------------------
+    // D) ABAS DA PROGRAMAÇÃO (Trocar Dias)
+    // -----------------------------------------------------------------
+    window.abrirDia = function(diaId, elementoBotao) {
+        // Esconde todos os conteúdos
+        let conteudos = document.getElementsByClassName("tab-content");
+        for (let i = 0; i < conteudos.length; i++) {
+            conteudos[i].classList.remove("active");
+        }
+        
+        // Tira o estilo "ativo" de todos os botões
+        let botoes = document.getElementsByClassName("tab-btn");
+        for (let i = 0; i < botoes.length; i++) {
+            botoes[i].classList.remove("active");
+        }
+        
+        // Mostra o dia certo e deixa o botão clicado ativo
+        document.getElementById(diaId).classList.add("active");
+        elementoBotao.classList.add("active");
+    };
