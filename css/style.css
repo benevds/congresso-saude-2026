@@ -414,6 +414,20 @@ header {
     border-radius: 15px;
 }
 
+/* FORÇA A GRADE DE DATAS A FICAR 2x2 NO MOBILE */
+    .datas-grid {
+        grid-template-columns: 1fr 1fr; /* Exatamente 2 colunas */
+        gap: 15px; /* Diminui um pouquinho o espaço entre eles pra não apertar */
+    }
+    
+    .data-card {
+        padding: 30px 10px; /* Diminui o espaço interno pra caber os textos lado a lado */
+    }
+    
+    .data-card h3 {
+        font-size: 0.95rem; /* Deixa a fonte levemente menor pra não quebrar palavras */
+    }
+
 .comissao-highlight {
     text-align: center;
     margin: 0 auto 50px;
@@ -715,6 +729,20 @@ footer {
     .apresentacao-section { padding: 40px 20px; }
     .local-info { padding: 20px; }
     .comissao-section { padding: 30px 20px; }
+
+    /* FORÇA A GRADE DE DATAS A FICAR 2x2 NO MOBILE */
+    .datas-grid {
+        grid-template-columns: 1fr 1fr; 
+        gap: 15px; 
+    }
+    
+    .data-card { 
+        padding: 30px 10px; 
+    }
+    
+    .data-card h3 { 
+        font-size: 0.95rem; 
+    }
 }
 
 @media (min-width: 1025px) {
